@@ -22,7 +22,7 @@ func main() {
 
 	http.Handle("/img/", http.StripPrefix("/img/", http.FileServer(http.Dir("img"))))
 	http.HandleFunc("/", homePage)
-	http.ListenAndServe(":8080", nil)
+	http.ListenAndServe(":80", nil)
 }
 
 func homePage(w http.ResponseWriter, r *http.Request) {
