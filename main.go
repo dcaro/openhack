@@ -12,11 +12,11 @@ type PageVariables struct {
 	Color string
 }
 
-//const city = "Amsterdam"
-//const color = "coral"
+const city = "Amsterdam"
+const color = "coral"
 
-const city = "Redmond"
-const color = "gray"
+//const city = "Redmond"
+//const color = "gray"
 
 func main() {
 
