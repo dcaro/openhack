@@ -5,10 +5,9 @@
 
 `docker build . -t dohapp`
 
-2- Run the application from the container
+2- Optional: Run the application from the container
 
 `docker run -p 8080:80 -it dohapp`
-
 
 ## Build and deploy on Kubernetes
 
@@ -37,16 +36,16 @@
 
 Navigate to the obtained IP to show the website
 
-
-5- Upgrade to version 2
+5- Upgrade to tag 2 of the container
 
 `helm upgrade dohapp ./dohapp --set image.repository=<registry_name>.azurecr.io/demo/dohapp,image.tag=2`
 
 Refresh the browser to show the updated version
 
+6- Rollback to previous revision
 
-6- Rollback to previous version
+`helm rollback dohapp 0`
 
-`helm rollback dohapp 1`
+Rollback to revision 0 brings back to the latest successful deployment.
 
 7- Refresh the browser to show the rollback
